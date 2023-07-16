@@ -6,3 +6,6 @@ def index(request):
 
 def contact(request):
     return render(request, 'catalog/contact.html')
+
+def catalog(request):
+    return render(request, 'catalog/catalog.html')
