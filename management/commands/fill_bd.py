@@ -10,16 +10,16 @@ class Command(BaseCommand):
         with open('data.json') as file:
             content = json.load(file)
 
-        categories_for_create = []
-        products_for_create = []
+        categories_create = []
+        products_create = []
 
         for model in content:
             if model['model'] == 'catalog.category':
-                categories_for_create.append(Category(pk=model['pk'],
+                categories_create.append(Category(pk=model['pk'],
                                                       category_name=model['fields']['category_name'],
                                                       category_description=model['fields']['category_description']))
             elif model['model'] == 'catalog.product':
-                products_for_create.append(Product(name=model['fields']['name'],
+                products_create.append(Product(name=model['fields']['name'],
                                                    description=model['fields']['description'],
                                                    img=model['fields']['img'],
                                                    price=model['fields']['price'],
@@ -28,7 +28,7 @@ class Command(BaseCommand):
                 continue
 
         Category.objects.all().delete()
-        Category.objects.bulk_create(categories_for_create)
+        Category.objects.bulk_create(categories_create)
 
         Product.objects.all().delete()
-        Product.objects.bulk_create(products_for_create)
+        Product.objects.bulk_create(products_create)
