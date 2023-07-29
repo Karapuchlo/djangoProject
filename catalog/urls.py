@@ -8,5 +8,5 @@ urlpatterns = [
     path('', index),
     path('contact/', contact),
     path('catalog/', catalog),
-   path('product', product)
+   path('product/', product)
 ]

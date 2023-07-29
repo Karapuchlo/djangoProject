@@ -1,14 +1,25 @@
 from django.shortcuts import render
+from django.views.generic import ListView, TemplateView
 
-# Create your views here.
-def index(request):
-    return render(request, 'catalog/index.html')
+from catalog.models import Product
 
-def contact(request):
-    return render(request, 'catalog/contact.html')
 
-def catalog(request):
-    return render(request, 'catalog/catalog.html')
+class ProductsListView(ListView):
+    model = Product
+    template_name = 'catalog/index.html'
+    my_context = {'title': 'Главная'}
 
-def product(request):
-    return render(request, 'catalog/product.html')
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update(self.my_context)
+        return context
+
+
+class CatalogPageView(TemplateView):
+    template_name = 'catalog/catalog.html'
+    extra_context = {'title': 'Каталог'}
+
+
+class ContactsPageView(TemplateView):
+    template_name = 'catalog/contacts.html'
+    extra_context = {'title': 'Контакты'}
