@@ -1,0 +1,29 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+{% load tags %}
+    <div class="col-lg-10">
+        <div class="content">
+            <h1>Добро пожаловать на домашнюю страницу!</h1>
+    <p>Здесь вы можете найти информацию о нашем каталоге.</p>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    {% for object in object_list %}
+                        <div class="col-3 mt-2">
+                            <div class="card text-center">
+                                <img src="{% mediapath object.img %}" alt="{{ object.description }}">
+                                <div class=" card-header">
+                                {{ object.name }}
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Цена {{ object.price }}р</h5>
+                                <p class="card-text">{{ object.description }}</p>
+                                <a href="#" class="btn btn-primary">Купить</a>
+                            </div>
+                        </div>
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
