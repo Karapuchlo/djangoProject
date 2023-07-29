@@ -6,7 +6,7 @@ from catalog.models import Product
 
 class ProductsListView(ListView):
     model = Product
-    template_name = 'catalog/index.html'
+    template_name = 'catalog/main.html'
     my_context = {'title': 'Главная'}
 
     def get_context_data(self, *, object_list=None, **kwargs):
