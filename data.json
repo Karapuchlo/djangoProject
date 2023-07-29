@@ -1,64 +1,64 @@
 [
   {
-    "model": "djiango_product.category",
+    "model": "catalog.category",
     "pk": 1,
     "fields": {
-      "category_name": "Электроника",
-      "category_description": "Технические устройства",
+      "category_name": "Р­Р»РµРєС‚СЂРѕРЅРёРєР°",
+      "category_description": "РўРµС…РЅРёС‡РµСЃРєРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІР°",
       "created_at": "2023-07-15T10:00:00.000Z"
     }
   },
   {
-    "model": "djiango_product.category",
+    "model": "catalog.category",
     "pk": 2,
     "fields": {
-      "category_name": "Одежда",
-      "category_description": "Одежда и аксессуары",
+      "category_name": "РћРґРµР¶РґР°",
+      "category_description": "РћРґРµР¶РґР° Рё Р°РєСЃРµСЃСЃСѓР°СЂС‹",
       "created_at": "2023-07-15T10:00:00.000Z"
     }
   },
   {
-    "model": "djiango_product.category",
+    "model": "catalog.category",
     "pk": 3,
     "fields": {
-      "category_name": "Красота и уход",
-      "category_description": "Косметика и средства для ухода",
+      "category_name": "РљСЂР°СЃРѕС‚Р° Рё СѓС…РѕРґ",
+      "category_description": "РљРѕСЃРјРµС‚РёРєР° Рё СЃСЂРµРґСЃС‚РІР° РґР»СЏ СѓС…РѕРґР°",
       "created_at": "2023-07-15T10:00:00.000Z"
     }
   },
   {
-    "model": "djiango_product.category",
+    "model": "catalog.category",
     "pk": 4,
     "fields": {
-      "category_name": "Дом и сад",
-      "category_description": "Товары для дома и сада",
+      "category_name": "Р”РѕРј Рё СЃР°Рґ",
+      "category_description": "РўРѕРІР°СЂС‹ РґР»СЏ РґРѕРјР° Рё СЃР°РґР°",
       "created_at": "2023-07-15T10:00:00.000Z"
     }
   },
   {
-    "model": "djiango_product.category",
+    "model": "catalog.category",
     "pk": 5,
     "fields": {
-      "category_name": "Спорт и отдых",
-      "category_description": "Товары для спорта и отдыха",
+      "category_name": "РЎРїРѕСЂС‚ Рё РѕС‚РґС‹С…",
+      "category_description": "РўРѕРІР°СЂС‹ РґР»СЏ СЃРїРѕСЂС‚Р° Рё РѕС‚РґС‹С…Р°",
       "created_at": "2023-07-15T10:00:00.000Z"
     }
   },
   {
-    "model": "djiango_product.category",
+    "model": "catalog.category",
     "pk": 6,
     "fields": {
-      "category_name": "Книги",
-      "category_description": "Книги различных жанров",
+      "category_name": "РљРЅРёРіРё",
+      "category_description": "РљРЅРёРіРё СЂР°Р·Р»РёС‡РЅС‹С… Р¶Р°РЅСЂРѕРІ",
       "created_at": "2023-07-15T10:00:00.000Z"
     }
   },
   {
-    "model": "djiango_product.product",
+    "model": "catalog.product",
     "pk": 1,
     "fields": {
-      "name": "Смартфон",
-      "description": "Мобильный телефон с функциями смартфона",
+      "name": "РЎРјР°СЂС‚С„РѕРЅ",
+      "description": "РњРѕР±РёР»СЊРЅС‹Р№ С‚РµР»РµС„РѕРЅ СЃ С„СѓРЅРєС†РёСЏРјРё СЃРјР°СЂС‚С„РѕРЅР°",
       "img": "phone.jpeg",
       "category": 1,
       "price": 500,
@@ -67,11 +67,11 @@
     }
   },
   {
-    "model": "djiango_product.product",
+    "model": "catalog.product",
     "pk": 2,
     "fields": {
-      "name": "Футболка",
-      "description": "Мужская футболка из хлопка",
+      "name": "Р¤СѓС‚Р±РѕР»РєР°",
+      "description": "РњСѓР¶СЃРєР°СЏ С„СѓС‚Р±РѕР»РєР° РёР· С…Р»РѕРїРєР°",
       "img": "T-shirt.png",
       "category": 2,
       "price": 20,
@@ -80,11 +80,11 @@
     }
   },
   {
-    "model": "djiango_product.product",
+    "model": "catalog.product",
     "pk": 3,
     "fields": {
-      "name": "Помада",
-      "description": "Помада для губ с матовым финишем",
+      "name": "РџРѕРјР°РґР°",
+      "description": "РџРѕРјР°РґР° РґР»СЏ РіСѓР± СЃ РјР°С‚РѕРІС‹Рј С„РёРЅРёС€РµРј",
       "img": "lipstick.jpg",
       "category": 3,
       "price": 15,
@@ -93,11 +93,11 @@
     }
   },
   {
-    "model": "djiango_product.product",
+    "model": "catalog.product",
     "pk": 4,
     "fields": {
-      "name": "Газонокосилка",
-      "description": "Электрическая газонокосилка для ухода за газоном",
+      "name": "Р“Р°Р·РѕРЅРѕРєРѕСЃРёР»РєР°",
+      "description": "Р­Р»РµРєС‚СЂРёС‡РµСЃРєР°СЏ РіР°Р·РѕРЅРѕРєРѕСЃРёР»РєР° РґР»СЏ СѓС…РѕРґР° Р·Р° РіР°Р·РѕРЅРѕРј",
       "img": "lawn_mower.jpg",
       "category": 4,
       "price": 150,
@@ -106,11 +106,11 @@
     }
   },
   {
-    "model": "djiango_product.product",
+    "model": "catalog.product",
     "pk": 5,
     "fields": {
-      "name": "Фитнес гантель",
-      "description": "Гантель для тренировок с регулируемым весом",
+      "name": "Р¤РёС‚РЅРµСЃ РіР°РЅС‚РµР»СЊ",
+      "description": "Р“Р°РЅС‚РµР»СЊ РґР»СЏ С‚СЂРµРЅРёСЂРѕРІРѕРє СЃ СЂРµРіСѓР»РёСЂСѓРµРјС‹Рј РІРµСЃРѕРј",
       "img": "dumbbells.png",
       "category": 5,
       "price": 30,
@@ -119,11 +119,11 @@
     }
   },
   {
-    "model": "djiango_product.product",
+    "model": "catalog.product",
     "pk": 6,
     "fields": {
-      "name": "Книга",
-      "description": "Исторический роман о приключениях",
+      "name": "РљРЅРёРіР°",
+      "description": "РСЃС‚РѕСЂРёС‡РµСЃРєРёР№ СЂРѕРјР°РЅ Рѕ РїСЂРёРєР»СЋС‡РµРЅРёСЏС…",
       "img": "book.png",
       "category": 6,
       "price": 10,
