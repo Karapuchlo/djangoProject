@@ -25,12 +25,11 @@ class ContactsPageView(TemplateView):
     extra_context = {'title': 'Контакты'}
 
 class ProductPageView(TemplateView):
+    model = Product
     template_name = 'catalog/product.html'
     extra_context = {'title': 'Товар'}
 
-    def product(request, id):
-        product = Product.objects.get(pk=id)
-        context = {
-            'product': product
-        }
-        return render(request, 'catalog/product.html', context)
+    def get_context_data(self, *, object_list=None, **kwargs):
+        product = super().get_context_data(**kwargs)
+        product.update(self.extra_context)
+        return product
