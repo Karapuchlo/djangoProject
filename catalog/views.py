@@ -21,5 +21,16 @@ class CatalogPageView(TemplateView):
 
 
 class ContactsPageView(TemplateView):
-    template_name = 'catalog/contacts.html'
+    template_name = 'catalog/contact.html'
     extra_context = {'title': 'Контакты'}
+
+class ProductPageView(TemplateView):
+    template_name = 'catalog/product.html'
+    extra_context = {'title': 'Товар'}
+
+    def product(request, id):
+        product = Product.objects.get(pk=id)
+        context = {
+            'product': product
+        }
+        return render(request, 'catalog/product.html', context)
