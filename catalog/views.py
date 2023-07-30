@@ -29,7 +29,7 @@ class ProductPageView(TemplateView):
     template_name = 'catalog/product.html'
     extra_context = {'title': 'Товар'}
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        product = super().get_context_data(**kwargs)
+    def product(self, *, object_list=None, **kwargs):
+        product = super().product(**kwargs)
         product.update(self.extra_context)
         return product
