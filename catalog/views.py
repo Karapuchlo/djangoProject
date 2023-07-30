@@ -26,10 +26,6 @@ class ContactsPageView(TemplateView):
 
 class ProductPageView(TemplateView):
     model = Product
+    fields = ('name', 'description', 'price',)
     template_name = 'catalog/product.html'
-    extra_context = {'title': 'Товар'}
-
-    def product(self, *, object_list=None, **kwargs):
-        product = super().product(**kwargs)
-        product.update(self.extra_context)
-        return product
+    my_context = {'title': 'Товар'}
