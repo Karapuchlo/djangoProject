@@ -26,6 +26,14 @@ class ContactsPageView(TemplateView):
 
 class ProductPageView(TemplateView):
     model = Product
-    fields = ('name', 'description', 'price',)
     template_name = 'catalog/product.html'
     my_context = {'title': 'Товар'}
+
+
+def product(request, pk):
+       product_item = Product.objects.get(pk=pk)
+       context = {
+           'object': product_item,
+           'title': product_item.name
+       }
+       return render(request, 'catalog/product.html', context)

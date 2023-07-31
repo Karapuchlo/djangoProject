@@ -1,11 +1,39 @@
 {% extends "catalog/base.html" %}
 {% block content %}
-<div class="container-fluid h-100">
-    <div class="row h-100">
-
-            <h2>{{object.name}}</h2>
-
-
+    {% load tags %}
+<div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Название продукта</td>
+                        <td>{{ object.name }} </td>
+                    </tr>
+                    <tr>
+                        <td>Описание продукта</td>
+                        <td>{{ object.description }}</td>
+                    </tr>
+                    <tr>
+                        <td>Категория</td>
+                        <td>{{ object.category }}</td>
+                    </tr>
+                    <tr>
+                        <td>Цена продукта:</td>
+                        <td>{{ object.price }} RUR</td>
+                    </tr>
+                    <tr>
+                        <td>Дата добавления:</td>
+                        <td>{{ object.date_of_creation }}</td>
+                    </tr>
+                    <tr>
+                        <td>Дата обновления:</td>
+                            <td>{{ object.last_change_date }}</td>
+                    </tr>
+                    <img src="{% mediapath object.img %}" alt="Изображение"  width="450" height="300"/>
+                </table>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
     </div>
-</div>
 {% endblock %}

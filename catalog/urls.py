@@ -9,5 +9,5 @@ urlpatterns = [
     path('', ProductsListView.as_view(), name='main_page'),
     path('contact/', ContactsPageView.as_view(), name='contact_page'),
     path('catalog/', CatalogPageView.as_view(), name='catalog_page'),
-    path('product/<int:pk>', ProductPageView.as_view(), name='product_page')
+    path('product/<int:pk>', product, name='product_page')
 ]
